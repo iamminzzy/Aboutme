@@ -1,3 +1,152 @@
 *{
     margin: 0;
+    padding: 0;
 }
+html {
+    font-size: 15px;
+    text-decoration-color: black;
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+section {
+    display: block;
+}
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+h2{
+    text-align: center;
+    padding: 2rem 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+li{
+    list-style: none;
+    text-decoration-color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#skills, #contact{
+    background-color: rgb(240, 240, 240);
+}
+#about, #skills, #experience, #footer{
+    height: auto;
+    padding-bottom: 2rem;
+}
+/* Header Section */
+#header .container{
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    background-color: rgb(255, 96, 96);
+}
+#header .container .left{
+    flex: 1;
+}
+#header .container .right{
+    flex: 1;
+    background-color: rgb(255, 96, 96);
+    color: white;
+    padding-left: 0.5rem;
+    font-family: fantasy;
+}
+#header .container .right h1{
+    font-size: 4rem;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#header .container .right h6{
+    font-size: 1.1rem;
+    font-family: cursive;
+}
+#header .container .left img{
+    align-items: center;
+    height: 404px;
+}
+
+/* Nav Section */
+#nav{
+    height: 50px;
+}
+#nav .navbar .container{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(240, 240, 240);
+    justify-content: space-evenly;
+    font-size: larger;
+    align-items: center;
+}
+#nav ul li:hover {
+    transform: scale(1.3);
+    transition: 0.5s ease;
+}
+/* About Section */
+
+#about .container{
+    margin-top: 20px;
+    justify-content: center;
+}
+#about .center{
+    margin: 0 4rem;
+}
+#about .center img{
+    border-style: double;
+    border-radius: 50%;
+    border-color: rgb(38, 38, 38);
+    align-items: center;
+    width: 300px;
+    height: auto;
+}
+#about li{
+    font-size: large;
+    margin-bottom: 20px;
+}
+#about .right{
+    margin-bottom: 40px;
+}
+/* Skils Section */
+#skills .container{
+    justify-content: space-around;
+    text-align: center;
+}
+#skills h3{
+    font-size: large;
+    margin-bottom: 2rem;
+}
+#skills p{
+    margin: 1rem;
+    font-size: large;
+}
+#skills p label{
+    margin-right: 1rem;
+}
+
+
+/* Experience Section */
+
+
+/* Contact Section */
+#contact .container{
+    justify-content: space-evenly;
+}
+
+/* Footer Section */
+#footer p{
+    padding-top: 1rem;
+    text-align: center;
+    color: #777777;
+    font-style: italic;
+    font-size: small;
+}
+
+/* Go to top Section */
