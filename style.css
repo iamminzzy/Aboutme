@@ -20,7 +20,7 @@ img {
 h2{
     font-size: 3vw;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1vh 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 li{
@@ -37,9 +37,9 @@ li{
 #skills, #contact{
     background-color: rgb(240, 240, 240);
 }
-#about, #skills, #experience, #footer{
+#about, #skills, #experience, #contact, #footer{
     height: auto;
-    padding-bottom: 2rem;
+    padding: 80px 0 50px 0;
 }
 
 /* Header Section */
@@ -181,7 +181,7 @@ li{
 
 /* Skils Section */
 #skills .container{
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     height: 60vh;
 }
@@ -221,15 +221,23 @@ progress{
 /* Contact Section */
 #contact .container{
     justify-content: space-evenly;
+    height: 65vh;
+    font-size: 70px;
 }
 
 /* Footer Section */
 #footer p{
     padding-top: 1rem;
     text-align: center;
-    color: #777777;
     font-style: italic;
+    font-weight: lighter;
     font-size: small;
+}
+#footer .footer_name{
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* Go to top Section */
@@ -253,15 +261,17 @@ progress{
       vertical-align: top;
     cursor: pointer;
     z-index: 100;
-  }
-  .darkmode-btn:hover{
+}
+.darkmode-btn:hover{
     background-color: rgb(43, 43, 43);
     color: rgb(235, 235, 235);
-  }
-  .dark-mode{
+}
+.dark-mode{
     background-color: rgb(43, 43, 43);
     color: rgb(235, 235, 235);
-  }
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
     h2{
         font-size: x-large;
@@ -279,6 +289,9 @@ progress{
     }
     #skills p label{
         margin-bottom: 1rem;
+    }
+    #contact .container{
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 1024px) {
