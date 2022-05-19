@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>Minjee Son | Profile</title> 
 </head>
@@ -16,7 +17,7 @@
                     <h1>MINJEE SON</h1>
                     <h6>front-end developer</h6>
                     <br><br>
-                    " Believe in yourself! "
+                    <p>" Believe in yourself! "</p>
             </div>
         </div>
     </section>
@@ -40,9 +41,9 @@
         <div class="container">
             <div class="left">
                 <ul>
-                    <li>MBTI</li>
-                    <li>Favorite Color</li>
-                    <li>Favorite Food</li>
+                    <li><span class="mbti">MBTI</span></li>
+                    <li><span class="color">Favorite Color</span></li>
+                    <li><span class="food">Favorite Food</span></li>
                 </ul>
             </div>
             <div class="center">
@@ -50,10 +51,22 @@
             </div>
             <div class="right">
                 <ul>
-                    <li style="color: rgb(255, 96, 96);">I like...</li>
-                    <li>Traveling</li>
-                    <li>Dancing</li>
-                    <li>Blogging</li>
+                    <span>I like...</span>
+                    <li>
+                        <a href="" target="_blank">
+                            Traveling
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtu.be/Qh7OBAbMXKI?t=121" target="_blank">
+                            Dancing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://blog.naver.com/minjee0801" target="_blank">
+                            Blogging
+                        </a>
+                    </li>
                 </ul>                
             </div>
         </div>
@@ -65,10 +78,10 @@
         <div class="container"><!--좌/우 나누기-->
             <div class="left">
                 <h3>Languages</h3>
-                <div class="progress">
+                <div class="progressbar">
                     <p>
                         <label for="Korean">Korean</label>
-                        <progress id="Korean" max="100" value="100"></progress>
+                        <progress id="Korean" max="100" value="100">Korean</progress>
                     </p>
                     <p>
                         <label for="English">English</label>
@@ -82,7 +95,7 @@
             </div>
             <div class="right">
                 <h3>Technologies</h3>
-                <div class="progress">
+                <div class="progressbar">
                     <p>
                         <label for="html">HTML</label>
                         <progress id="html" max="100" value="80"></progress>

@@ -17,16 +17,8 @@ img {
     width: 100%;
     object-fit: cover;
 }
-section {
-    display: block;
-}
-.container {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-around;
-}
 h2{
+    font-size: 3vw;
     text-align: center;
     padding: 2rem 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -35,7 +27,12 @@ li{
     list-style: none;
     text-decoration-color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+}
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
 }
 #skills, #contact{
     background-color: rgb(240, 240, 240);
@@ -44,80 +41,149 @@ li{
     height: auto;
     padding-bottom: 2rem;
 }
+
 /* Header Section */
 #header .container{
+    margin: 0;
     width: 100%;
-    height: 400px;
-    align-items: center;
+    height: 70%;
+    border: 0;
     background-color: rgb(255, 96, 96);
 }
 #header .container .left{
     flex: 1;
+    max-height: 965px;
 }
 #header .container .right{
     flex: 1;
-    background-color: rgb(255, 96, 96);
     color: white;
-    padding-left: 0.5rem;
+    padding-left: 2rem;
     font-family: fantasy;
 }
 #header .container .right h1{
-    font-size: 4rem;
+    font-size: 6vw;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #header .container .right h6{
-    font-size: 1.1rem;
+    font-size: 1.5vw;
     font-family: cursive;
 }
+#header .container .right p{
+    font-size: 3vw;
+}
 #header .container .left img{
+    width: 100%;
+    height: 70%;
     align-items: center;
-    height: 404px;
+    box-shadow: 0 3px 3px 0 lightgray;
 }
 
 /* Nav Section */
 #nav{
+    width: 100%;
     height: 50px;
+    position: sticky;
+    top: 0px;
 }
 #nav .navbar .container{
     width: 100%;
     height: 50px;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240, 0.5);
     justify-content: space-evenly;
     font-size: larger;
     align-items: center;
 }
-#nav ul li:hover {
+#nav .container li:hover {
     transform: scale(1.3);
     transition: 0.5s ease;
 }
-/* About Section */
 
+/* About Section */
 #about .container{
     margin-top: 20px;
     justify-content: center;
+    height: 60vh;
 }
 #about .center{
-    margin: 0 4rem;
-}
-#about .center img{
-    border-style: double;
-    border-radius: 50%;
-    border-color: rgb(38, 38, 38);
-    align-items: center;
     width: 300px;
     height: auto;
+    align-items: center;
+    margin: 0 4vw;
+    border-style: none;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(255, 114, 114);
 }
 #about li{
-    font-size: large;
-    margin-bottom: 20px;
+    width: 33.3vw;
+    font-size: 40px;
+    margin-top: 30px;
+    cursor: pointer;
+    position: relative;
 }
 #about .right{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
+#about .right span{
+    color: rgb(255, 96, 96);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: right;
+    font-size: 25px;
+}
+#about .right a::after{
+    content:"Click";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    background-color: rgb(255, 96, 96);
+    transition: 0.2s ease;
+    opacity: 0;
+}
+#about .right a:hover::after{
+    color: white; 
+    width: 100%;
+    opacity: 1;
+}
+#about .left{
+    text-align: right;
+}
+#about .left .mbti::after{
+    content: "ESTJ";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+}
+#about .left .color::after{
+    content: "Pink & Gray";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+}
+#about .left .food::after{
+    content: "Lasagna";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+}
+#about .left :hover::after{
+    background-color: white;
+    color: rgb(255, 96, 96); 
+    width: 100%;
+    opacity: 1;
+}
+
+
 /* Skils Section */
 #skills .container{
     justify-content: space-around;
     text-align: center;
+    height: 60vh;
 }
 #skills h3{
     font-size: large;
@@ -126,11 +192,28 @@ li{
 #skills p{
     margin: 1rem;
     font-size: large;
+    display: flex;
+    justify-content: flex-end;
 }
 #skills p label{
+    display: inline-block;
     margin-right: 1rem;
+    z-index: 10;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
-
+#skills .container .progressbar{
+    display: flex;
+    flex-direction: column;
+}
+progress{
+    appearance: none;
+}
+::-webkit-progress-bar{
+    background-color: rgb(255, 255, 255);
+}
+::-webkit-progress-value{
+    background-color: rgb(255, 96, 96);
+}
 
 /* Experience Section */
 
@@ -150,3 +233,34 @@ li{
 }
 
 /* Go to top Section */
+
+@media screen and (max-width: 768px) {
+    h2{
+        font-size: x-large;
+    }
+    #header .container .left img{
+        width: 100%;
+        height: 290px;
+    }
+    #about .center{
+        width: 33vw;
+        height: auto;
+   }
+    #skills p{   
+        flex-direction: column;
+    }
+    #skills p label{
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    #about li{
+        font-size: 4vw;
+    }
+    #about .right span{
+        font-size: 3vw;
+    }
+    #about .container{
+        height: 100%;
+    }
+}
