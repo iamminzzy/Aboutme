@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <title>MJ's WEB</title>
+      <meta charset="utf-8">
+      <link href="mjweb.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <button class="custom-btn btn">MJ's WEB</button>
+      </a>
+    </header>
+    <div class="container">
+      <!--light/dark mode-->
+      <input class="darkmode-btn" type="button" value="night" onclick="
+      if(this.value === 'night'){
+        document.querySelector('body').style.backgroundColor = 'rgb(43, 43, 43)';
+        document.querySelector('body').style.color = 'white';
+        this.value = 'day'
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        this.value = 'night'
+        }
+      ">
+      <!--함수 이용ver.
+      <button class="darkmode-btn" type="button" onclick="darkMode()">
+        Light / Dark
+      </button>
+      <script>
+        function darkMode(){
+          var element = document.body;
+          element.classList.toggle("dark-mode");
+        }
+      </script>
+      -->
+      <div class="nav">
+        <ul>
+          <li><a href="glry1.html">&#x1F337;<br> SPRING</a></li>
+          <li><a href="glry2.html">&#x1F334;<br> SUMMER</a></li>
+          <li><a href="glry3.html">&#x1F341;<br> AUTUMN</a></li>
+          <li><a href="glry4.html">❄️<br> WINTER</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="index1">
+          <h2> Hello, Friends! &#128151;</h2>
+          <p>
+            This is my FIRST web page for HTML/CSS practice.<br>
+            I'm <i>'ZZOLEV'</i> of coding now,<br>
+            but I'm gonna LEVEL UP soon !!<br><br> 
+            Welcome to <strong>MY GALLERY</strong> 😍
+          </p>
+          <a href="https://blog.naver.com/minjee0801"
+          target="_blank" title="몽블로그"><img src="main.jpg" width="60%" alt="In Porto"></a>
+        </div>
+        <div class="index2">
+          CLICK THE IMAGE! &#128054;
+        </div>
+        <div class="index3">
+        <iframe width="560px" height="315px" name="vlog"
+        src="https://www.youtube.com/embed/q7YhD6x7Nis"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        </div>
+        <div id="disqus_thread" style="margin-top: 50px;"></div>
+          <script>
+              /**
+              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+              /*
+              var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+              };
+              */
+              (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = 'https://iamminzzy.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+          </noscript>
+          <script id="dsq-count-scr" src="//iamminzzy.disqus.com/count.js" async>
+          </script>
+      </div>
+    </div>
+  </body>
+</html>

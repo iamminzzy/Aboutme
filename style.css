@@ -234,6 +234,34 @@ progress{
 
 /* Go to top Section */
 
+/* Light & Dark Mode */
+.darkmode-btn{
+    width: 95px;
+    height: 50px;
+    color: rgb(43, 43, 43);
+    background-color: white;
+    border-radius: 30px;
+    border-style: none;
+    box-shadow: 1px 1px 3px rgb(212, 212, 212);
+    position: fixed;
+    margin: 0;
+    right: 30px;
+    bottom: 20px;
+    display: inline-block;
+      background-position: -270px -55px;
+      background-repeat: no-repeat;
+      vertical-align: top;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .darkmode-btn:hover{
+    background-color: rgb(43, 43, 43);
+    color: rgb(235, 235, 235);
+  }
+  .dark-mode{
+    background-color: rgb(43, 43, 43);
+    color: rgb(235, 235, 235);
+  }
 @media screen and (max-width: 768px) {
     h2{
         font-size: x-large;

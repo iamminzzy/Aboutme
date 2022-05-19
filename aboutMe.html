@@ -14,10 +14,10 @@
                 <img src="./img/main.JPG" alt="mainimg">
             </div>
             <div class="right">
-                    <h1>MINJEE SON</h1>
-                    <h6>front-end developer</h6>
-                    <br><br>
-                    <p>" Believe in yourself! "</p>
+                <h1>MINJEE SON</h1>
+                <h6>front-end developer</h6>
+                <br><br>
+                <p>" Believe in yourself! "</p>
             </div>
         </div>
     </section>
@@ -155,5 +155,22 @@
     <section id="gotoTop">
 
     </section>
+
+    <!--light/dark mode-->
+    <input class="darkmode-btn" type="button" value="night" onclick="
+    if(this.value === 'night'){
+    document.querySelector('body').style.backgroundColor = 'rgb(100, 100, 100)';
+    document.querySelector('#skills').style.backgroundColor = 'rgb(43, 43, 43)';
+    document.querySelector('#contact').style.backgroundColor = 'rgb(43, 43, 43)';
+    document.querySelector('body').style.color = 'white';
+    this.value = 'day'
+    } else {
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('#skills').style.backgroundColor = 'rgb(240, 240, 240)';
+    document.querySelector('#contact').style.backgroundColor = 'rgb(240, 240, 240)';
+    document.querySelector('body').style.color = 'black';
+    this.value = 'night'
+    }
+    ">
 </body>
 </html>
