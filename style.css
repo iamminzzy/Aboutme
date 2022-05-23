@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 html {
     font-size: 15px;
@@ -21,6 +22,7 @@ h2{
     font-size: 3vw;
     text-align: center;
     padding: 1vh 0;
+    margin-bottom: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 li{
@@ -30,7 +32,7 @@ li{
 }
 .container {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -65,7 +67,7 @@ li{
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #header .container .right h6{
-    font-size: 1.5vw;
+    font-size: 2.3vw;
     font-family: cursive;
 }
 #header .container .right p{
@@ -76,6 +78,61 @@ li{
     height: 70%;
     align-items: center;
     box-shadow: 0 3px 3px 0 lightgray;
+}
+
+/* Go to top Section */
+
+
+/* Light & Dark Mode */
+
+#darkmode {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin: 0;
+transition: background 0.2s linear;
+}
+#darkmode .dark {
+background-color: #292c35;
+}
+.checkbox {
+opacity: 0;
+position: fixed;
+}
+.label {
+width: 50px;
+height: 26px;
+background-color:rgb(255, 96, 96);
+display: flex;
+border-radius:50px;
+align-items: center;
+justify-content: space-between;
+padding: 5px;
+position: relative;
+transform: scale(1.5);
+}
+.ball {
+width: 20px;
+height: 20px;
+background-color: rgb(240, 240,240);
+position: absolute;
+top: 2px;
+left: 2px;
+border-radius: 50%;
+transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball{
+transform: translateX(24px);
+}
+
+.fa-moon {
+color: #292c35;
+}
+
+.fa-sun {
+color: rgb(255, 255, 255);
 }
 
 /* Nav Section */
@@ -103,6 +160,7 @@ li{
     margin-top: 20px;
     justify-content: center;
     height: 60vh;
+    flex-wrap: nowrap;
 }
 #about .center{
     width: 300px;
@@ -183,7 +241,7 @@ li{
 #skills .container{
     justify-content: space-evenly;
     text-align: center;
-    height: 60vh;
+    height: 45vh;
 }
 #skills h3{
     font-size: large;
@@ -216,12 +274,26 @@ progress{
 }
 
 /* Experience Section */
-
-
+#experience .container{
+    display: flex;
+    width: 70vw;
+    background-color: rgb(255, 255, 255);
+    justify-items: center;
+}
+.ex_box{
+    width: 350px;
+    justify-items: center;
+    margin: 0;
+    text-align: center;
+}
+.ex_box img{
+    width: 300px;
+    height: 400px;
+}
 /* Contact Section */
 #contact .container{
     justify-content: space-evenly;
-    height: 65vh;
+    height: 40vh;
     font-size: 70px;
 }
 
@@ -238,37 +310,6 @@ progress{
     font-weight: bold;
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-/* Go to top Section */
-
-/* Light & Dark Mode */
-.darkmode-btn{
-    width: 95px;
-    height: 50px;
-    color: rgb(43, 43, 43);
-    background-color: white;
-    border-radius: 30px;
-    border-style: none;
-    box-shadow: 1px 1px 3px rgb(212, 212, 212);
-    position: fixed;
-    margin: 0;
-    right: 30px;
-    bottom: 20px;
-    display: inline-block;
-      background-position: -270px -55px;
-      background-repeat: no-repeat;
-      vertical-align: top;
-    cursor: pointer;
-    z-index: 100;
-}
-.darkmode-btn:hover{
-    background-color: rgb(43, 43, 43);
-    color: rgb(235, 235, 235);
-}
-.dark-mode{
-    background-color: rgb(43, 43, 43);
-    color: rgb(235, 235, 235);
 }
 
 /* Responsive */
@@ -291,7 +332,9 @@ progress{
         margin-bottom: 1rem;
     }
     #contact .container{
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
     }
 }
 @media screen and (max-width: 1024px) {

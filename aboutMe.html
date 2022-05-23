@@ -23,6 +23,21 @@
         </div>
     </section>
 
+    <!-- Go to top -->
+    <section id="gotoTop">
+
+    </section>
+
+    <!--light/dark mode-->
+    <section id="darkmode">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="label">
+            <i class="fas fa-moon"></i>
+            <i class='fas fa-sun'></i>
+            <div class='ball'></div>
+        </label>
+    </section>
+
     <!-- Nav Section -->
     <section id="nav">
         <div class="navbar">
@@ -117,7 +132,20 @@
     <!-- Experience Section -->
     <section id="experience">
         <h2>EXPERIENCE</h2>
-  
+        <div class="container">
+            <div class="ex_box">
+                <h3>Education</h3>
+                <img src="./img/ex_1.jpg" alt="education">
+            </div>
+            <div class="ex_box">
+                <h3>Flying to✈️</h3>
+                <img src="./img/ex_3.jpg" alt="working">
+            </div>
+            <div class="ex_box">
+                <h3>And now</h3>
+                <img src="./img/ex_4.jpg" alt="and now">
+            </div>
+        </div>
     </section>
   
     <!-- Contact Section -->
@@ -136,27 +164,5 @@
         <div class="footer_name">MINJEE SON</div>
         <p>copyright ⓒ 2022 All rights reserved by MJ.</p>
     </section>
-
-    <!-- Go to top -->
-    <section id="gotoTop">
-
-    </section>
-
-    <!--light/dark mode-->
-    <input class="darkmode-btn" type="button" value="night" onclick="
-    if(this.value === 'night'){
-    document.querySelector('body').style.backgroundColor = 'rgb(100, 100, 100)';
-    document.querySelector('#skills').style.backgroundColor = 'rgb(43, 43, 43)';
-    document.querySelector('#contact').style.backgroundColor = 'rgb(43, 43, 43)';
-    document.querySelector('body').style.color = 'white';
-    this.value = 'day'
-    } else {
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('#skills').style.backgroundColor = 'rgb(240, 240, 240)';
-    document.querySelector('#contact').style.backgroundColor = 'rgb(240, 240, 240)';
-    document.querySelector('body').style.color = 'black';
-    this.value = 'night'
-    }
-    ">
 </body>
 </html>
