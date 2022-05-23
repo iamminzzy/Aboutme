@@ -342,6 +342,12 @@ progress{
         grid-template-columns: 1fr 1fr;
         justify-items: center;
     }
+    #experience .container{
+        flex-direction: column;
+    }
+    #experience .ex_box{
+        margin-bottom: 30px;
+    }
 }
 @media screen and (max-width: 1024px) {
     #about li{
