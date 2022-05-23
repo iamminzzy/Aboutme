@@ -22,7 +22,7 @@ h2{
     font-size: 3vw;
     text-align: center;
     padding: 1vh 0;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 li{
@@ -81,7 +81,13 @@ li{
 }
 
 /* Go to top Section */
-
+#gotoTop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 6vh;
+    color: rgb(255, 96, 96);
+}
 
 /* Light & Dark Mode */
 
