@@ -32,7 +32,7 @@ li{
 }
 .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -274,21 +274,27 @@ progress{
 }
 
 /* Experience Section */
-#experience .container{
+
+#experience .ex_box{
     display: flex;
-    width: 70vw;
-    background-color: rgb(255, 255, 255);
-    justify-items: center;
-}
-.ex_box{
+    flex-direction: column;
     width: 350px;
-    justify-items: center;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     text-align: center;
+    background-color: rgb(240, 240, 240);
+    border-radius: 5%;
 }
-.ex_box img{
+#experience .ex_box h3{
+    font-size: larger;
+    margin: 0 20px;
+}
+#experience .ex_box img{
     width: 300px;
     height: 400px;
+    display: block;
 }
 /* Contact Section */
 #contact .container{
