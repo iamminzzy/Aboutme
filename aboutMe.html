@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&family=Josefin+Sans:wght@300&family=Lato:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a5680c824e.js" crossorigin="anonymous"></script>
     <title>Minjee Son | Profile</title> 
 </head>
@@ -28,16 +31,10 @@
         <a class="fa-solid fa-circle-up" href="#header"></a>
     </section>
 
-    <!--light/dark mode
+    <!--light/dark mode-->
     <section id="darkmode">
-        <input type="checkbox" class="checkbox" id="checkbox">
-        <label for="checkbox" class="label">
-            <i class="fas fa-moon"></i>
-            <i class='fas fa-sun'></i>
-            <div class='ball'></div>
-        </label>
+        <i class="fa-solid fa-circle-half-stroke"></i>
     </section>
-    -->
 
     <!-- Nav Section -->
     <section id="nav">
@@ -151,12 +148,47 @@
   
     <!-- Contact Section -->
     <section id="contact">
-        <h2>CONTACT ME</h2>
+        <h2>CONTACT</h2>
         <div class="container">
-            <a class="fa-solid fa-phone" href="tel:+821029090801"></a>
-            <a class="fa-solid fa-envelope-open" href="mailto:minjee4281@gmail.com" target="_blank"></a>
-            <a class="fa-brands fa-github" href="https://github.com/iamminzzy" target="_blank"></a>
-            <a class="fa-solid fa-blog" href="https://velog.io/@iamminzzy" target="_blank"></a>
+            <div class="left">
+                <h3>Email ME 😀</h3>
+                <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxzWE3vc5ziBuT4lJVYwQdcBlJxo8iImjAV8RWn/exec" data-email="minjee4281@gmail.com">
+                    <fieldset class="contact_title pure-group">
+                        <label for="m_title">제목</label>
+                        <input type="text" id="m_title" name="name">
+                    </fieldset>
+                    <fieldset class="contact_add pure-group">
+                        <label for="m_add">회신주소</label>
+                        <input type="text" id="m_add" name="email">
+                    </fieldset>
+                    <fieldset class="contact_cont pure-group">
+                        <label for="m_cont">내용</label>
+                        <textarea id="m_cont" rows="6" placeholder="보내실 내용을 적어주세요!" name="message"></textarea>
+                    </fieldset>
+                    <input type="submit" class="contact_submit" value="메일 보내기">
+                </form>
+                <!--pop up the Thank you message-->
+            </div>
+            <div class="right">
+                <ul>
+                    <li class="contact_items">
+                        <a class="fa-solid fa-phone" href="tel:+821029090801"></a>
+                        <p>010 - 2909 - 0801</p>
+                    </li>
+                    <li class="contact_items">
+                        <a class="fa-solid fa-envelope-open" href="mailto:minjee4281@gmail.com" target="_blank"></a>
+                        <p>minjee4281@gmail.com</p>
+                    </li>  
+                    <li class="contact_items">
+                        <a class="fa-brands fa-github" href="https://github.com/iamminzzy" target="_blank"></a>
+                        <p>https://github.com/iamminzzy</p>
+                    </li>
+                    <li class="contact_items">
+                        <a class="fa-solid fa-blog" href="https://velog.io/@iamminzzy" target="_blank"></a>
+                        <p>https://velog.io/@iamminzzy</p>
+                    </li>
+                </ul>     
+            </div>
         </div>
     </section>
 
@@ -165,6 +197,7 @@
         <div class="footer_name">MINJEE SON</div>
         <p>copyright ⓒ 2022 All rights reserved by MJ.</p>
     </section>
-    <script src="aboutMe.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="./js/form-submission-handler.js"></script>
+    <script src="./js/aboutMe.js"></script>
 </body>
 </html>
