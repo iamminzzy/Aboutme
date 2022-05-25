@@ -10,12 +10,13 @@
 }
 :root{
     --background-color: white;
+    --text-color: black;
     --color-gray: rgb(240, 240, 240);
     --color-pink: rgb(255, 96, 96);
 }
 html {
     font-size: 15px;
-    text-decoration-color: black;
+    text-decoration-color: var(--text-color);
     scroll-behavior: smooth;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 } 
@@ -37,7 +38,7 @@ h2{
 }
 li{
     list-style: none;
-    text-decoration-color: black;
+    text-decoration-color: var(--text-color);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .container {
@@ -45,6 +46,7 @@ li{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around;
+    margin: 0 auto;
 }
 #skills, #contact{
     background-color: var(--color-gray);
@@ -56,7 +58,6 @@ li{
 
 /* Header Section */
 #header .container{
-    margin: 0;
     border: 0;
     background-color: var(--color-pink);
 }
@@ -66,12 +67,10 @@ li{
 #header .container .right{
     width: 50%;
     color: white;
-    padding-left: 2rem;
-    font-family: fantasy;
+    padding-left: 30px;
 }
 #header .container .right h1{
     font-size: 6vw;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #header .container .right h6{
     font-size: 2.3vw;
@@ -79,8 +78,10 @@ li{
 }
 #header .container .right p{
     font-size: 3vw;
+    font-family: fantasy;
 }
 #header .container .left img{
+    min-height: 200px;
     align-items: center;
     box-shadow: 0 3px 3px 0 lightgray;
 }
@@ -91,10 +92,11 @@ li{
     right: 20px;
     bottom: 20px;
     font-size: 6vh;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 96, 96, .5);
+    z-index: 100;
 }
 #gotoTop:hover{
-    color: black;
+    color: var(--color-pink);
 }
 
 /* Light & Dark Mode */
@@ -103,7 +105,12 @@ li{
     right: 90px;
     bottom: 20px;
     font-size: 6vh;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 96, 96, .5);
+    z-index: 100;
+}
+#darkmode:hover{
+    cursor: pointer;
+    color: var(--color-pink);
 }
 
 /* Nav Section */
@@ -160,24 +167,31 @@ li{
     text-align: right;
     font-size: 25px;
 }
+#about .right a{
+    position: relative;
+}
 #about .right a::after{
-    content:"Click";
+    content: "";
     position: absolute;
     width: 0;
     height: 100%;
     left: 0;
     cursor: pointer;
-    transition: 0.2s ease;
     opacity: 0;
 }
 #about .right a:hover::after{
+    content:"Click";
     color: white;
     background-color: var(--color-pink); 
     width: 100%;
+    transition: 0.3s ease;
     opacity: 1;
 }
 #about .left{
     text-align: right;
+}
+#about .left span{
+    position: relative;
 }
 #about .left .mbti::after{
     content: "ESTJ";
@@ -204,7 +218,8 @@ li{
     opacity: 0;
 }
 #about .left :hover::after{
-    background-color:white;    
+    position: absolute;
+    background-color: var(--background-color);    
     color: var(--color-pink); 
     width: 100%;
     opacity: 1;
@@ -262,6 +277,7 @@ progress{
 #experience .ex_box h3{
     font-size: larger;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 #experience .ex_box img{
     width: 250px;
@@ -297,7 +313,7 @@ progress{
     color: var(--color-pink);
 }
 .pure-group {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 5px rgba(0,0,0,.1);
     margin-bottom: 10px;
 }
@@ -305,13 +321,13 @@ progress{
     display: inline-block;
     width: 70px;
     height: 40px;
-    background-color: #fff;
     vertical-align: top;
     line-height: 40px;
     font-size: 14px;
     font-weight: bold;
     font-family: 'lato', sans-serif;
     text-indent: 10px;
+    color: var(--text-color);
 }
 .pure-group input {
     width: 350px;
@@ -344,7 +360,9 @@ progress{
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,.1);
     font-size: 15px;
-    font-weight: bold;
+    font-weight: bolder;
+    font-family: 'lato', sans-serif;
+    cursor: pointer;
 }
 #contact .right{
     display: flex;
