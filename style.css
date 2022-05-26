@@ -9,16 +9,22 @@
     src: url(./fonts/AntipastoPro-Hairline_trial.ttf);
 }
 :root{
-    --background-color: white;
-    --text-color: black;
+    --background-color: rgb(255, 255, 255);
+    --text-color: rgb(43, 43, 43);
     --color-gray: rgb(240, 240, 240);
     --color-pink: rgb(255, 96, 96);
-}
-html {
-    font-size: 15px;
-    text-decoration-color: var(--text-color);
     scroll-behavior: smooth;
+}
+.dark-mode{
+    --background-color: rgb(43, 43, 43);
+    --text-color: rgb(255, 255, 255);
+    --color-gray: rgb(73, 73, 73);
+}
+body {
+    font-size: 15px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
 } 
 a {
     text-decoration: none;
@@ -38,7 +44,6 @@ h2{
 }
 li{
     list-style: none;
-    text-decoration-color: var(--text-color);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .container {
@@ -48,6 +53,7 @@ li{
     justify-content: space-around;
     margin: 0 auto;
 }
+
 #skills, #contact{
     background-color: var(--color-gray);
 }
@@ -77,7 +83,7 @@ li{
     font-family: cursive;
 }
 #header .container .right p{
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-family: fantasy;
 }
 #header .container .left img{
@@ -144,7 +150,7 @@ li{
     flex-wrap: nowrap;
 }
 #about .center{
-    width: 300px;
+    width: 33.3vw;
     height: auto;
     align-items: center;
     margin: 0 4vw;
@@ -154,8 +160,8 @@ li{
 }
 #about li{
     width: 33.3vw;
-    font-size: 40px;
-    margin-top: 30px;
+    font-size: 3.5vw;
+    margin-top: 40px;
     position: relative;
 }
 #about .right{
@@ -390,7 +396,11 @@ progress{
     align-items: center;
 }
 #contact .contact_items a{
-    font-size: 50px;
+    font-size: 45px;
+}
+#contact .contact_items a:hover{
+    transform: rotate(20deg);
+    transition: .3s ease;
 }
 #contact .contact_items p{
     font-size: 20px;
@@ -425,14 +435,11 @@ progress{
     #about.container{
         height: fit-content;
     }
-    #about .center{
-        width: 33vw;
-    }
-    #about li{
-        font-size: 4vw;
-    }
     #about .right span{
         font-size: 3vw;
+    }
+    #about li{
+        margin-top: 25px;
     }
     #skills p{   
         flex-direction: column;

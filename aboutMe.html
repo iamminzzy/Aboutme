@@ -34,23 +34,6 @@
     <!--light/dark mode-->
     <section id="darkmode">
         <i onclick="darkMode()" class="fa-solid fa-circle-half-stroke"></i>
-        <script>
-            function darkMode(){
-                if(this.value === 'night'){
-                    document.querySelector('body').style.backgroundColor = 'rgb(73, 73, 73)';
-                    document.querySelector('#skills').style.backgroundColor = 'rgb(43, 43, 43)';
-                    document.querySelector('#contact').style.backgroundColor = 'rgb(43, 43, 43)'; 
-                    document.querySelector('body').style.color = 'rgb(230, 230, 230)';                    
-                   this.value = 'day'
-                } else {
-                    document.querySelector('body').style.backgroundColor = 'var(--background-color)';
-                    document.querySelector('#skills').style.backgroundColor = 'var(--color-gray)';
-                    document.querySelector('#contact').style.backgroundColor = 'var(--color-gray)'; 
-                    document.querySelector('body').style.color = 'var(--text-color)';
-                    this.value = 'night'
-                    }
-            }
-        </script>
     </section>
 
     <!-- Nav Section -->
