@@ -333,7 +333,7 @@ progress{
     font-weight: bold;
     font-family: 'lato', sans-serif;
     text-indent: 10px;
-    color: var(--text-color);
+    color: rgb(43, 43, 43);
 }
 .pure-group input {
     width: 300px;
@@ -363,6 +363,7 @@ progress{
     text-align: center;
     padding: 5px 0;
     border: 0;
+    color: rgb(43, 43, 43);
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,.1);
     font-size: 15px;
