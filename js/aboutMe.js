@@ -16,8 +16,14 @@ function darkMode(){
         }
 }*/
 
+// Dark Mode toggle
 function darkMode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
+ }
+
+ // Confirm that mail has been sent
+ function confirmSubmit(){
+     alert('메일이 전송되었습니다.')
  }
  
