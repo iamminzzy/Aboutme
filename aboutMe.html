@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&family=Josefin+Sans:wght@300&family=Lato:wght@300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a5680c824e.js" crossorigin="anonymous"></script>
     <title>Minjee Son | Profile</title> 
 </head>
 <body>
@@ -67,7 +66,7 @@
                 <ul>
                     <span>I like...</span>
                     <li>
-                        <a href="" target="_blank">
+                        <a href="https://www.instagram.com/m.minzzy/" target="_blank">
                             Traveling
                         </a>
                     </li>
@@ -152,22 +151,22 @@
         <div class="container">
             <div class="left">
                 <h3>Email ME :)</h3>
-                <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxzWE3vc5ziBuT4lJVYwQdcBlJxo8iImjAV8RWn/exec" data-email="minjee4281@gmail.com" onsubmit="confirmSubmit()">
+                <form class="gform" onsubmit="sendingEmail()">
                     <fieldset class="contact_title pure-group">
                         <label for="m_title">TITLE</label>
-                        <input type="text" id="m_title" name="name">
+                        <input type="text" id="m_title" name="name" required>
                     </fieldset>
                     <fieldset class="contact_add pure-group">
                         <label for="m_add">Mail Address</label>
-                        <input type="text" id="m_add" name="email">
+                        <input type="text" id="m_add" name="email" required>
                     </fieldset>
                     <fieldset class="contact_cont pure-group">
                         <label for="m_cont">CONTENTS</label>
-                        <textarea id="m_cont" rows="6" placeholder="Text here!" name="message"></textarea>
+                        <textarea id="m_cont" rows="6" placeholder="Text here!" name="message" required></textarea>
                     </fieldset>
                     <input type="submit" class="contact_submit" value="SEND">
                 </form>
-                <!--pop up the Thank you message-->
+                <!--pop up the confirm message-->
             </div>
             <div class="right">
                 <ul>
@@ -197,6 +196,7 @@
         <div class="footer_name">MINJEE SON</div>
         <p>copyright ⓒ 2022 All rights reserved by MJ.</p>
     </section>
+    <script src="https://kit.fontawesome.com/a5680c824e.js" crossorigin="anonymous"></script>
     <script data-cfasync="false" type="text/javascript" src="./js/form-submission-handler.js"></script>
     <script src="./js/aboutMe.js"></script>
 </body>
