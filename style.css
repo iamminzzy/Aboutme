@@ -356,6 +356,7 @@ progress{
     outline: none;
     font-size: 17px;
     font-family: 'lato', sans-serif;
+    resize: none;
 }
 .contact_submit {
     display: block;
