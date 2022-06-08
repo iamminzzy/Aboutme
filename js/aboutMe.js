@@ -27,6 +27,19 @@ function sendingEmail(){
     }, 1000);
 }
 
+// 링크로 이동여부를 Question
+externalLink.onclick = function(event) {
 
+    function handleLink(title) {
+      let isLeaving = confirm(`Leave for ${title}?`);
+      if (!isLeaving) return false;
+    }
+
+    let target = event.target.closest('a');
+
+    if (target && externalLink.contains(target)) {
+      return handleLink(target.getAttribute('title'));
+    }
+  };
 
  
