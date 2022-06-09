@@ -234,9 +234,10 @@ li{
 
 /* Skils Section */
 #skills .container{
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: center;
 }
+
 #skills h3{
     font-size: large;
     margin-bottom: 2rem;
@@ -456,6 +457,12 @@ progress{
     #experience .ex_box{
         margin-bottom: 30px;
     }
+    #skills .left{
+        padding-left: 10%;
+    }
+    #skills .right{
+        padding-right: 10%;
+}
     
 }
 @media screen and (max-width: 1000px) {

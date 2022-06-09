@@ -25,6 +25,7 @@ function sendingEmail(){
     setTimeout(function (){
         alert('메일이 전송되었습니다.');
     }, 1000);
+    
 }
 
 // 링크로 이동여부를 Question
