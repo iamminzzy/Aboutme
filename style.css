@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*only Eng*/
+/*font for only ENG*/
 @font-face {
     font-family: "antipastoPro";
     src: url(./fonts/AntipastoPro-Hairline_trial.ttf);
@@ -36,10 +36,10 @@ img {
     object-fit: cover;
 }
 h2{
-    font-size: 3vw;
+    font-size: xxx-large;
     text-align: center;
     padding: 1vh 0;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 li{
@@ -58,7 +58,7 @@ li{
     background-color: var(--color-gray);
 }
 #about, #skills, #experience, #contact{
-    height: auto;
+    height: 100vh;
     padding: 100px 0;
 }
 
@@ -236,40 +236,94 @@ li{
 #skills .container{
     justify-content: space-around;
     text-align: center;
-}
 
-#skills h3{
-    font-size: large;
-    margin-bottom: 2rem;
 }
-#skills p{
-    margin: 1rem;
+#skills h3{
+    font-size: x-large;
+    margin: 50px 0;
+}
+#skills .element{
+    padding: 15px 15px 40px 15px;
     font-size: large;
     display: flex;
     justify-content: flex-end;
 }
-#skills p label{
+.element label{
     display: inline-block;
-    margin-right: 1rem;
-    z-index: 10;
+    margin-right: 10px;
+    font-size: larger;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
-#skills .container .progressbar{
+.chart{
+    background: var(--background-color);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
     display: flex;
-    flex-direction: column;
+    height: 35px;
+    width: 300px;
 }
-progress{
-    appearance: none;
+.bar{
+    border-radius: 100px;
+    background: var(--color-pink);
+    height: 25px;
+    width: 0;
 }
-::-webkit-progress-bar{
-    background-color: white;
+.load1{
+    animation: load1 3s normal forwards;
 }
-::-webkit-progress-value{
-    background-color: var(--color-pink);
+.load2{
+    animation: load2 3s normal forwards;
+}
+.load3{
+    animation: load3 3s normal forwards;
+}
+.load4{
+    animation: load4 3s normal forwards;
+}
+.load5{
+    animation: load5 3s normal forwards;
+}
+.load6{
+    animation: load6 3s normal forwards;
+}
+@keyframes load1 {
+    from {width: 0;}
+    to {width: 100%;}
+}
+@keyframes load2 {
+    from {width: 0;}
+    to {width: 80%;}
+}
+@keyframes load3 {
+    from {width: 0;}
+    to {width: 90%;}
+}
+@keyframes load4 {
+    from {width: 0;}
+    to {width: 95%;}
+}
+@keyframes load5 {
+    from {width: 0;}
+    to {width: 80%;}
+}
+@keyframes load6 {
+    from {width: 0;}
+    to {width: 80%;}
+}
+.bar span{
+    margin-left: 5px;
+    color: var(--text-color);
+    font-weight: bolder;
 }
 
 /* Experience Section */
-#experience .ex_box{
+#experience{
+    height: 100vh;
+}
+.ex_box{
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -281,17 +335,17 @@ progress{
     background-color: var(--color-gray);
     border-radius: 5%;
 }
-#experience .ex_box h3{
+.ex_box h3{
     font-size: larger;
     margin-bottom: 20px;
     color: var(--text-color);
 }
-#experience .ex_box img{
+.ex_box img{
     width: 250px;
     height: 300px;
     display: block;
 }/*
-#experience .ex_box::after{
+.ex_box::after{
     content:"";
     position: absolute;
     width: 0;
@@ -300,7 +354,7 @@ progress{
     transition: 0.2s ease;
     opacity: 0;
 }
-#experience .ex_box:hover::after{
+.ex_box:hover::after{
     color: white;
     background-color: var(--color-pink); 
     width: 100%;
@@ -392,20 +446,20 @@ progress{
     height: 400px;
     background-color: black;
 }
-#contact .contact_items{
+.contact_items{
     display: grid;
     grid-template-columns: 70px 1fr;
     margin: 40px 0;
     align-items: center;
 }
-#contact .contact_items a{
+.contact_items a{
     font-size: 45px;
 }
-#contact .contact_items a:hover{
+.contact_items a:hover{
     transform: rotate(20deg);
     transition: .3s ease;
 }
-#contact .contact_items p{
+.contact_items p{
     font-size: 20px;
     font-family: 'lato', sans-serif;
 
@@ -415,7 +469,7 @@ progress{
 #footer{
     padding: 50px 0 30px;
 }
-#footer .footer_name{
+.footer_name{
     font-size: xx-large;
     font-weight: bold;
     text-align: center;
@@ -434,6 +488,12 @@ progress{
 @media screen and (max-width: 768px) {
     h2{
         font-size: x-large;
+        margin-bottom: 30px;
+    }
+    #about,
+    #skills,
+    #experience{
+        height: auto;
     }
     #about.container{
         height: fit-content;
@@ -444,28 +504,29 @@ progress{
     #about li{
         margin-top: 25px;
     }
-    #skills p{   
+    .progressbar{   
         flex-direction: column;
     }
-    #skills p label{
+    .element label{
         margin-bottom: 1rem;
     }
-    #experience .container{
+    #experience .container,
+    #skills .container{
         flex-direction: column;
     }
-    
-    #experience .ex_box{
+    .ex_box{
         margin-bottom: 30px;
     }
-    #skills .left{
-        padding-left: 10%;
-    }
-    #skills .right{
-        padding-right: 10%;
-}
+    
     
 }
 @media screen and (max-width: 1000px) {
+    .element{
+        flex-direction: column;
+    }
+    #contact{
+        height: auto;
+    }
     #contact .container{
         flex-direction: column;
     }

@@ -18,7 +18,7 @@ function sendingEmail(){
         check.focus();
         return false;
     }
-    
+
     form.action = 'https://script.google.com/macros/s/AKfycbxzWE3vc5ziBuT4lJVYwQdcBlJxo8iImjAV8RWn/exec';
     form.mothod = 'POST';
 
@@ -42,5 +42,3 @@ externalLink.onclick = function(event) {
       return handleLink(target.getAttribute('title'));
     }
   };
-
- 
