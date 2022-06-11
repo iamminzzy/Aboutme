@@ -1,17 +1,35 @@
 
-// Dark mode toggle
-function darkMode() {
-    let element = document.body;
-    element.classList.toggle("dark-mode");
- }
+/* Dark mode toggle*/
+const element = document.body;
+const changeThemeButton = document.getElementById('darkmode');
 
- // Send the email and make alert pop-up 
+const changeTheme = () => {
+    element.classList.toggle('dark-mode');
+
+    // 만일 클릭을 통해 dark-mode 클래스가 생성이 되었다면.
+    if (element.classList.contains('dark-mode')) {
+        localStorage.setItem('darkTheme', 'active'); // 추가하기. key = darkTheme , value = active
+    } else {
+        localStorage.removeItem('darkTheme'); // 클릭을 통해 클래스가 사라졌다면, 사이트내 키값도 삭제한다.
+    }
+}
+
+changeThemeButton.addEventListener('click', changeTheme);
+
+//currentTheme==dark 이면, 계속 dark-mode 유지하기
+const currentTheme = localStorage.getItem('darkTheme');
+
+if(currentTheme){
+    element.classList.add('dark-mode');
+}
+
+/* Send the email and make alert pop-up */
 function sendingEmail(){
-    let check = document.getElementById('m_add');
-    let form = document.querySelector('.gform');
+    const check = document.getElementById('m_add');
+    const form = document.querySelector('.gform');
 
     // Perform validation of email-address format
-    let exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+    const exptext = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
     if (exptext.test(check.value) == false) {
         //이메일 형식이 알파벳+숫자@알파벳+숫자.알파벳+숫자 형식이 아닐경우			
         alert("입력한 메일형식이 올바르지 않습니다.");
@@ -28,15 +46,15 @@ function sendingEmail(){
     
 }
 
-// 링크로 이동여부를 Question
+/* 링크로 이동여부를 Question */
 externalLink.onclick = function(event) {
 
     function handleLink(title) {
-      let isLeaving = confirm(`Leave for ${title}?`);
+      const isLeaving = confirm(`Leave for ${title}?`);
       if (!isLeaving) return false;
     }
 
-    let target = event.target.closest('a');
+    const target = event.target.closest('a');
 
     if (target && externalLink.contains(target)) {
       return handleLink(target.getAttribute('title'));
