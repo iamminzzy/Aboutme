@@ -428,7 +428,9 @@ li {
     margin-bottom: 20px;
     color: var(--color-pink);
 }
-
+.img_box img{
+    border-radius: 10%;
+}
 .img_box {
     width: 250px;
     height: 300px;
