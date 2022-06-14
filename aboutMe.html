@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300&family=Josefin+Sans:wght@300&family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo:wght@300&family=Josefin+Sans:wght@300&family=Lato:wght@300&display=swap">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Minjee Son | Profile</title> 
+    <title>Minjee Son | Profile</title>
 </head>
+
 <body>
     <!-- Header Section -->
     <section id="header">
-        <div class="container"><!--좌/우 나누기-->
+        <div class="container">
+            <!--좌/우 나누기-->
             <div class="left">
                 <img src="./img/main.JPG" alt="mainimg">
             </div>
@@ -81,7 +84,7 @@
                             Blogging
                         </a>
                     </li>
-                </ul>                
+                </ul>
             </div>
         </div>
     </section>
@@ -89,7 +92,8 @@
     <!-- Skills Section -->
     <section id="skills">
         <h2 data-aos="fade-up" data-aos-duration="1000">MY SKILLS</h2>
-        <div class="container"><!--좌/우 나누기-->
+        <div class="container">
+            <!--좌/우 나누기-->
             <div class="left" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="250">
                 <h3>Languages</h3>
                 <div class="progressbar">
@@ -157,19 +161,37 @@
         <div class="container">
             <div class="ex_box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
                 <h3>Education</h3>
-                <img src="./img/ex_1.jpg" alt="education">
+                <div class="img_box">
+                    <img src="./img/ex_1.jpg" alt="education">
+                    <div class="content">
+                        Bachelor of Science<br>
+                        in Digital Media
+                    </div>
+                </div>
             </div>
-            <div class="ex_box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"> 
+            <div class="ex_box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                 <h3>Working</h3>
-                <img src="./img/ex_3.jpg" alt="working">
+                <div class="img_box">
+                    <img src="./img/ex_3.jpg" alt="working">
+                    <div class="content">
+                        Flight attendant<br>
+                        for 5 years
+                    </div>
+                </div>
             </div>
             <div class="ex_box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
                 <h3>And now</h3>
-                <img src="./img/ex_4.jpg" alt="and now">
+                <div class="img_box">
+                    <img src="./img/ex_4.jpg" alt="and now">
+                    <div class="content">
+                        Studying to be<br>
+                        a Front-End Developer
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-  
+
     <!-- Contact Section -->
     <section id="contact">
         <h2 data-aos="fade-up" data-aos-duration="1000">CONTACT</h2>
@@ -206,7 +228,7 @@
                     <li class="contact_items">
                         <a class="fa-solid fa-envelope-open" href="mailto:minjee4281@gmail.com" target="_blank"></a>
                         <p>minjee4281@gmail.com</p>
-                    </li>  
+                    </li>
                     <li class="contact_items">
                         <a class="fa-brands fa-github" href="https://github.com/iamminzzy" target="_blank"></a>
                         <p>https://github.com/iamminzzy</p>
@@ -215,7 +237,7 @@
                         <a class="fa-solid fa-blog" href="https://velog.io/@iamminzzy" target="_blank"></a>
                         <p>https://velog.io/@iamminzzy</p>
                     </li>
-                </ul>     
+                </ul>
             </div>
         </div>
     </section>
@@ -233,4 +255,5 @@
         AOS.init();
     </script>
 </body>
+
 </html>

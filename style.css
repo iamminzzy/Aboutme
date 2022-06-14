@@ -1,51 +1,60 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /*font for only ENG*/
 @font-face {
     font-family: "antipastoPro";
     src: url(./fonts/AntipastoPro-Hairline_trial.ttf);
 }
-:root{
+
+:root {
     --background-color: rgb(255, 255, 255);
     --text-color: rgb(43, 43, 43);
     --color-gray: rgb(240, 240, 240);
     --color-pink: rgb(255, 96, 96);
     scroll-behavior: smooth;
 }
-.dark-mode{
+
+.dark-mode {
     --background-color: rgb(43, 43, 43);
     --text-color: rgb(255, 255, 255);
     --color-gray: rgb(73, 73, 73);
 }
+
 body {
     font-size: 15px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
-} 
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
+
 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-h2{
+
+h2 {
     font-size: xxx-large;
     text-align: center;
     padding: 1vh 0;
     margin-bottom: 100px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-li{
+
+li {
     list-style: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .container {
     display: flex;
     flex-wrap: nowrap;
@@ -54,46 +63,57 @@ li{
     margin: 0 auto;
 }
 
-#skills, #contact{
+#skills,
+#contact {
     background-color: var(--color-gray);
 }
-#about, #skills, #experience, #contact{
+
+#about,
+#skills,
+#experience,
+#contact {
     height: 100vh;
     padding: 100px 0;
 }
 
 /* Header Section */
-#header .container{
+#header .container {
     border: 0;
     background-color: var(--color-pink);
 }
-#header .container .left{
+
+#header .container .left {
     width: 50%;
 }
-#header .container .right{
+
+#header .container .right {
     width: 50%;
     color: white;
     padding-left: 30px;
 }
-#header .container .right h1{
+
+#header .container .right h1 {
     font-size: 6vw;
 }
-#header .container .right h6{
+
+#header .container .right h6 {
     font-size: 2.3vw;
     font-family: cursive;
 }
-#header .container .right p{
+
+#header .container .right p {
     font-size: 2.5vw;
     font-family: fantasy;
 }
-#header .container .left img{
+
+#header .container .left img {
     min-height: 200px;
     align-items: center;
     box-shadow: 0 3px 3px 0 lightgray;
 }
 
 /* Go to top Section */
-#gotoTop{
+#gotoTop {
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -101,12 +121,13 @@ li{
     color: rgba(255, 96, 96, .5);
     z-index: 100;
 }
-#gotoTop:hover{
+
+#gotoTop:hover {
     color: var(--color-pink);
 }
 
 /* Light & Dark Mode */
-#darkmode{
+#darkmode {
     position: fixed;
     right: 90px;
     bottom: 20px;
@@ -114,20 +135,22 @@ li{
     color: rgba(255, 96, 96, .5);
     z-index: 100;
 }
-#darkmode:hover{
+
+#darkmode:hover {
     cursor: pointer;
     color: var(--color-pink);
 }
 
 /* Nav Section */
-#nav{
+#nav {
     width: 100%;
     height: 50px;
     position: sticky;
     top: 0px;
     z-index: 1;
 }
-#nav .navbar .container{
+
+#nav .navbar .container {
     width: 100%;
     height: 50px;
     background-color: rgb(240, 240, 240, 0.5);
@@ -135,6 +158,7 @@ li{
     font-size: larger;
     align-items: center;
 }
+
 #nav .container li {
     transition: 0.5s ease;
 }
@@ -145,11 +169,12 @@ li{
 }
 
 /* About Section */
-#about .container{
+#about .container {
     justify-content: center;
     flex-wrap: nowrap;
 }
-#about .center{
+
+#about .center {
     width: 33.3vw;
     height: auto;
     align-items: center;
@@ -158,25 +183,30 @@ li{
     border-radius: 50%;
     box-shadow: 0 0 0 3px var(--color-pink);
 }
-#about li{
+
+#about li {
     width: 33.3vw;
     font-size: 3.5vw;
     margin-top: 40px;
     position: relative;
 }
-#about .right{
+
+#about .right {
     margin-bottom: 30px;
 }
-#about .right span{
+
+#about .right span {
     color: var(--color-pink);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: right;
     font-size: 25px;
 }
-#about .right a{
+
+#about .right a {
     position: relative;
 }
-#about .right a::after{
+
+#about .right a::after {
     content: "";
     position: absolute;
     width: 0;
@@ -185,21 +215,25 @@ li{
     cursor: pointer;
     opacity: 0;
 }
-#about .right a:hover::after{
-    content:"Click";
+
+#about .right a:hover::after {
+    content: "Click";
     color: white;
-    background-color: var(--color-pink); 
+    background-color: var(--color-pink);
     width: 100%;
     transition: 0.3s ease;
     opacity: 1;
 }
-#about .left{
+
+#about .left {
     text-align: right;
 }
-#about .left span{
+
+#about .left span {
     position: relative;
 }
-#about .left .mbti::after{
+
+#about .left .mbti::after {
     content: "ESTJ";
     position: absolute;
     width: 0;
@@ -207,7 +241,8 @@ li{
     left: 0;
     opacity: 0;
 }
-#about .left .color::after{
+
+#about .left .color::after {
     content: "Pink & Gray";
     position: absolute;
     width: 0;
@@ -215,7 +250,8 @@ li{
     left: 0;
     opacity: 0;
 }
-#about .left .season::after{
+
+#about .left .season::after {
     content: "Autumn";
     position: absolute;
     width: 0;
@@ -223,38 +259,43 @@ li{
     left: 0;
     opacity: 0;
 }
-#about .left :hover::after{
+
+#about .left :hover::after {
     position: absolute;
-    background-color: var(--background-color);    
-    color: var(--color-pink); 
+    background-color: var(--background-color);
+    color: var(--color-pink);
     width: 100%;
     opacity: 1;
 }
 
 
 /* Skils Section */
-#skills .container{
+#skills .container {
     justify-content: space-around;
     text-align: center;
 
 }
-#skills h3{
+
+#skills h3 {
     font-size: x-large;
     margin: 50px 0;
 }
-#skills .element{
+
+#skills .element {
     padding: 15px 15px 40px 15px;
     font-size: large;
     display: flex;
     justify-content: flex-end;
 }
-.element label{
+
+.element label {
     display: inline-block;
     margin-right: 10px;
     font-size: larger;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.chart{
+
+.chart {
     background: var(--background-color);
     justify-content: flex-start;
     border-radius: 100px;
@@ -265,65 +306,110 @@ li{
     height: 35px;
     width: 300px;
 }
-.bar{
+
+.bar {
     border-radius: 100px;
     background: var(--color-pink);
     height: 25px;
     width: 0;
 }
-.load1{
+
+.load1 {
     animation: load1 3s normal forwards;
 }
-.load2{
+
+.load2 {
     animation: load2 3s normal forwards;
 }
-.load3{
+
+.load3 {
     animation: load3 3s normal forwards;
 }
-.load4{
+
+.load4 {
     animation: load4 3s normal forwards;
 }
-.load5{
+
+.load5 {
     animation: load5 3s normal forwards;
 }
-.load6{
+
+.load6 {
     animation: load6 3s normal forwards;
 }
+
 @keyframes load1 {
-    from {width: 0;}
-    to {width: 100%;}
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
+
 @keyframes load2 {
-    from {width: 0;}
-    to {width: 80%;}
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80%;
+    }
 }
+
 @keyframes load3 {
-    from {width: 0;}
-    to {width: 90%;}
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 90%;
+    }
 }
+
 @keyframes load4 {
-    from {width: 0;}
-    to {width: 95%;}
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 95%;
+    }
 }
+
 @keyframes load5 {
-    from {width: 0;}
-    to {width: 80%;}
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80%;
+    }
 }
+
 @keyframes load6 {
-    from {width: 0;}
-    to {width: 80%;}
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80%;
+    }
 }
-.bar span{
+
+.bar span {
     margin-left: 5px;
     color: var(--text-color);
     font-weight: bolder;
 }
 
 /* Experience Section */
-#experience{
+#experience {
     height: 100vh;
 }
-.ex_box{
+
+.ex_box {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -331,35 +417,44 @@ li{
     justify-content: center;
     align-items: center;
     margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     background-color: var(--color-gray);
-    border-radius: 5%;
+    box-shadow: 5px 5px 20px rgba(94, 94, 94, 0.247);
 }
-.ex_box h3{
+
+.ex_box h3 {
     font-size: larger;
     margin-bottom: 20px;
-    color: var(--text-color);
+    color: var(--color-pink);
 }
-.ex_box img{
+
+.img_box {
     width: 250px;
     height: 300px;
-    display: block;
-}/*
-.ex_box::after{
-    content:"";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    left: 0;
-    transition: 0.2s ease;
-    opacity: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.ex_box:hover::after{
-    color: white;
-    background-color: var(--color-pink); 
-    width: 100%;
+
+.img_box:hover img {
+    transition: .5s;
+    opacity: 0.5;
+}
+
+.content {
+    position: absolute;
+    opacity: 0;
+    transition: .3s ease-out;
+    font-size: 25px;
+}
+
+.img_box:hover .content {
+    transition: .3s ease-in;
     opacity: 1;
 }
+
 /* Contact Section */
 #contact .left {
     display: flex;
@@ -368,16 +463,19 @@ li{
     width: 50%;
     padding: 20px 50px;
 }
+
 #contact .left h3 {
     margin-bottom: 15px;
-	font-size: 20px;
+    font-size: 20px;
     color: var(--color-pink);
 }
+
 .pure-group {
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
     margin-bottom: 10px;
 }
+
 .pure-group label {
     display: inline-block;
     width: 100px;
@@ -390,6 +488,7 @@ li{
     text-indent: 10px;
     color: rgb(43, 43, 43);
 }
+
 .pure-group input {
     width: 300px;
     height: 40px;
@@ -400,9 +499,11 @@ li{
     font-size: 17px;
     font-family: 'lato', sans-serif;
 }
+
 .contact_cont label {
     display: none;
 }
+
 .contact_cont textarea {
     width: 100%;
     border: 0;
@@ -413,6 +514,7 @@ li{
     font-family: 'lato', sans-serif;
     resize: none;
 }
+
 .contact_submit {
     display: block;
     width: 100%;
@@ -421,13 +523,14 @@ li{
     border: 0;
     color: rgb(43, 43, 43);
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
     font-size: 15px;
     font-weight: bolder;
     font-family: 'lato', sans-serif;
     cursor: pointer;
 }
-#contact .right{
+
+#contact .right {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -436,6 +539,7 @@ li{
     padding: 20px 75px;
     margin-top: 20px;
 }
+
 #contact .right::before {
     content: "";
     display: block;
@@ -446,36 +550,42 @@ li{
     height: 400px;
     background-color: black;
 }
-.contact_items{
+
+.contact_items {
     display: grid;
     grid-template-columns: 70px 1fr;
     margin: 40px 0;
     align-items: center;
 }
-.contact_items a{
+
+.contact_items a {
     font-size: 45px;
 }
-.contact_items a:hover{
+
+.contact_items a:hover {
     transform: rotate(20deg);
     transition: .3s ease;
 }
-.contact_items p{
+
+.contact_items p {
     font-size: 20px;
     font-family: 'lato', sans-serif;
 
 }
 
 /* Footer Section */
-#footer{
+#footer {
     padding: 50px 0 30px;
 }
-.footer_name{
+
+.footer_name {
     font-size: xx-large;
     font-weight: bold;
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-#footer p{
+
+#footer p {
     padding-top: 1rem;
     text-align: center;
     font-style: italic;
@@ -486,58 +596,72 @@ li{
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-    h2{
+    h2 {
         font-size: x-large;
         margin-bottom: 30px;
     }
+
     #about,
     #skills,
-    #experience{
+    #experience {
         height: auto;
     }
-    #about.container{
+
+    #about.container {
         height: fit-content;
     }
-    #about .right span{
+
+    #about .right span {
         font-size: 3vw;
     }
-    #about li{
+
+    #about li {
         margin-top: 25px;
     }
-    .progressbar{   
+
+    .progressbar {
         flex-direction: column;
     }
-    .element label{
+
+    .element label {
         margin-bottom: 1rem;
     }
+
     #experience .container,
-    #skills .container{
+    #skills .container {
         flex-direction: column;
     }
-    .ex_box{
+
+    .ex_box {
         margin-bottom: 30px;
     }
-    
-    
+
+
 }
+
 @media screen and (max-width: 1000px) {
-    .element{
+    .element {
         flex-direction: column;
     }
-    #contact{
+
+    #contact {
         height: auto;
     }
-    #contact .container{
+
+    #contact .container {
         flex-direction: column;
     }
+
     #contact .left {
         align-items: center;
         width: 100%;
     }
-    #contact .right{
+
+    #contact .right {
         width: 100%;
         align-items: center;
     }
+
     #contact .right::before {
         width: 0;
     }

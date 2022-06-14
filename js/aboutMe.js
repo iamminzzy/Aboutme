@@ -19,12 +19,12 @@ changeThemeButton.addEventListener('click', changeTheme);
 //currentTheme==dark 이면, 계속 dark-mode 유지하기
 const currentTheme = localStorage.getItem('darkTheme');
 
-if(currentTheme){
+if (currentTheme) {
     element.classList.add('dark-mode');
 }
 
 /* Send the email and make alert pop-up */
-function sendingEmail(){
+function sendingEmail() {
     const check = document.getElementById('m_add');
     const form = document.querySelector('.gform');
 
@@ -40,23 +40,23 @@ function sendingEmail(){
     form.action = 'https://script.google.com/macros/s/AKfycbxzWE3vc5ziBuT4lJVYwQdcBlJxo8iImjAV8RWn/exec';
     form.mothod = 'POST';
 
-    setTimeout(function (){
+    setTimeout(function () {
         alert('메일이 전송되었습니다.');
     }, 1000);
-    
+
 }
 
 /* 링크로 이동여부를 Question */
-externalLink.onclick = function(event) {
+externalLink.onclick = function (event) {
 
     function handleLink(title) {
-      const isLeaving = confirm(`Leave for ${title}?`);
-      if (!isLeaving) return false;
+        const isLeaving = confirm(`Leave for ${title}?`);
+        if (!isLeaving) return false;
     }
 
     const target = event.target.closest('a');
 
     if (target && externalLink.contains(target)) {
-      return handleLink(target.getAttribute('title'));
+        return handleLink(target.getAttribute('title'));
     }
-  };
+};
