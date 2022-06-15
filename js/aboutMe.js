@@ -23,7 +23,56 @@ if (currentTheme) {
     element.classList.add('dark-mode');
 }
 
-/* Send the email and make alert pop-up */
+/* 'About' :: Questions about whether to move to the link */
+externalLink.onclick = function (event) {
+
+    function handleLink(title) {
+        const isLeaving = confirm(`Leave for ${title}?`);
+        if (!isLeaving) return false;
+    }
+
+    const target = event.target.closest('a');
+
+    if (target && externalLink.contains(target)) {
+        return handleLink(target.getAttribute('title'));
+    }
+};
+
+/* 'Skills' :: 스크롤에 따른 Animation Effects */
+const $bar = document.querySelectorAll('.bar');
+const $percent = document.querySelectorAll('.percent');
+
+window.addEventListener('scroll', () => {
+    const thisScroll = window.scrollY;
+
+    if (thisScroll > 1000) {
+        $bar[0].classList.add('load1');
+        $bar[3].classList.add('load4');
+        $percent[0].classList.add('active');
+        $percent[3].classList.add('active');
+    }
+    if (thisScroll > 1100) {
+        $bar[1].classList.add('load2');
+        $bar[4].classList.add('load5');
+        $percent[1].classList.add('active');
+        $percent[4].classList.add('active');
+    }
+    if (thisScroll > 1200) {
+        $bar[2].classList.add('load3');
+        $bar[5].classList.add('load6');
+        $percent[2].classList.add('active');
+        $percent[5].classList.add('active');
+    }
+    if (thisScroll < 690) {
+        for (i = 0; i < 6; i++) {
+            $bar[i].classList.remove(`load${i+1}`);
+            $percent[i].classList.remove('active');
+        }
+    }
+});
+
+
+/* 'Contact' :: Send the email and make alert pop-up */
 function sendingEmail() {
     const check = document.getElementById('m_add');
     const form = document.querySelector('.gform');
@@ -45,18 +94,3 @@ function sendingEmail() {
     }, 1000);
 
 }
-
-/* 링크로 이동여부를 Question */
-externalLink.onclick = function (event) {
-
-    function handleLink(title) {
-        const isLeaving = confirm(`Leave for ${title}?`);
-        if (!isLeaving) return false;
-    }
-
-    const target = event.target.closest('a');
-
-    if (target && externalLink.contains(target)) {
-        return handleLink(target.getAttribute('title'));
-    }
-};

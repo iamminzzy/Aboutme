@@ -92,21 +92,21 @@ li {
     padding-left: 30px;
 }
 
-#header .container .right h1 {
+#header h1 {
     font-size: 6vw;
 }
 
-#header .container .right h6 {
+#header h6 {
     font-size: 2.3vw;
+    font-family: "antipastoPro";
+}
+
+#header p {
+    font-size: 2.5vw;
     font-family: cursive;
 }
 
-#header .container .right p {
-    font-size: 2.5vw;
-    font-family: fantasy;
-}
-
-#header .container .left img {
+#header img {
     min-height: 200px;
     align-items: center;
     box-shadow: 0 3px 3px 0 lightgray;
@@ -398,10 +398,17 @@ li {
     }
 }
 
-.bar span {
+.percent {
     margin-left: 5px;
     color: var(--text-color);
     font-weight: bolder;
+    transition-delay: 1.5s;
+    transition-duration: .5s;
+    opacity: 0;
+}
+
+.active {
+    opacity: 1;
 }
 
 /* Experience Section */
@@ -428,9 +435,11 @@ li {
     margin-bottom: 20px;
     color: var(--color-pink);
 }
-.img_box img{
+
+.img_box img {
     border-radius: 10%;
 }
+
 .img_box {
     width: 250px;
     height: 300px;
@@ -599,7 +608,7 @@ li {
 /* Responsive */
 @media screen and (max-width: 768px) {
     h2 {
-        font-size: x-large;
+        font-size:xx-large;
         margin-bottom: 30px;
     }
 
@@ -609,32 +618,32 @@ li {
         height: auto;
     }
 
-    #about.container {
-        height: fit-content;
-    }
-
     #about .right span {
         font-size: 3vw;
     }
 
     #about li {
+        width: 45vw;
+        font-size: 20px;
         margin-top: 25px;
+        margin-bottom: 25px;
     }
 
-    .progressbar {
-        flex-direction: column;
-    }
-
-    .element label {
-        margin-bottom: 1rem;
-    }
-
+    #about .container,
     #experience .container,
     #skills .container {
         flex-direction: column;
     }
 
-    .ex_box {
+    #skills .progressbar {
+        flex-direction: column;
+    }
+
+    #skills .element label {
+        margin-bottom: 1rem;
+    }
+
+    #experience .ex_box {
         margin-bottom: 30px;
     }
 
@@ -642,7 +651,7 @@ li {
 }
 
 @media screen and (max-width: 1000px) {
-    .element {
+    #skills .element {
         flex-direction: column;
     }
 
