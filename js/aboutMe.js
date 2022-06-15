@@ -65,7 +65,7 @@ window.addEventListener('scroll', () => {
     }
     if (thisScroll < 690) {
         for (i = 0; i < 6; i++) {
-            $bar[i].classList.remove(`load${i+1}`);
+            $bar[i].classList.remove(`load${i + 1}`);
             $percent[i].classList.remove('active');
         }
     }

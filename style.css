@@ -273,7 +273,6 @@ li {
 #skills .container {
     justify-content: space-around;
     text-align: center;
-
 }
 
 #skills h3 {
@@ -608,7 +607,7 @@ li {
 /* Responsive */
 @media screen and (max-width: 768px) {
     h2 {
-        font-size:xx-large;
+        font-size: xx-large;
         margin-bottom: 30px;
     }
 
